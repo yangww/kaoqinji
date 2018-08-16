@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="105px"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="0.5px"
+        android:id="@+id/tv_operation_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="13px"
+        android:paddingBottom="11px"
+        android:background="@drawable/bg_round_operationinner"
+        android:gravity="center"
+        android:textSize="20px"
+        android:text="登录" />
+
+    <TextView
+        android:id="@+id/tv_operation_updata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20px"
+        android:paddingTop="13px"
+        android:paddingBottom="11px"
+        android:gravity="center"
+        android:background="@drawable/bg_round_operationinner"
+        android:text="同步数据" />
+
+    <TextView
+        android:id="@+id/tv_operation_dataList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="13px"
+        android:paddingBottom="11px"
+        android:gravity="center"
+        android:textSize="20px"
+        android:background="@drawable/bg_round_operationinner"
+        android:text="数据列表" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/operation_login"
+        android:icon="@null"
+        android:title="登录"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/operation_updata"
+        android:icon="@null"
+        android:title="同步数据"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/operation_datalist"
+        android:icon="@null"
+        android:title="数据列表"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/operation_settype"
+        android:icon="@null"
+        android:title="设置类别"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/operation_creditcard"
+        android:icon="@null"
+        android:title="测试刷卡"
+        app:showAsAction="never" />
+</menu>

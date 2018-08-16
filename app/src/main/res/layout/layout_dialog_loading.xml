@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600dp"
+    android:layout_height="700dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/bg_round_logindialog">
+
+    <ProgressBar
+        android:id="@+id/pb_dialog_runing"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/dialog_loading" />
+
+    <ImageView
+        android:id="@+id/iv_dialog_complete"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/iv_dialog_success"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_dialog_runing"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        android:text="..."
+        android:textColor="@color/blue_title_bar" />
+</RelativeLayout>

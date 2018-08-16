@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.android.melo.kaoqinfuxiao.view.MainActivity">
+        <!--69px-->
+        <include layout="@layout/topbar_main" />
+        <!--14px-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="14px"
+            android:background="#eeeeee"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52px"
+            android:src="@mipmap/iv_school_desc" />
+
+        <TextView
+            android:id="@+id/tv_main_introductionContent"
+            android:layout_width="match_parent"
+            android:layout_height="295px"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="20px"
+            android:lineSpacingExtra="20px"
+            android:text="@string/main_introductionContent"
+            android:textColor="#666666"
+            android:textSize="25px" />
+
+        <!--<com.android.melo.kaoqinfuxiao.weight.ScrollTextView-->
+        <!--android:id="@+id/st_main_introductionContent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="295px"-->
+        <!--android:layout_marginLeft="60px"-->
+        <!--android:layout_marginRight="60px"-->
+        <!--android:layout_marginTop="20px"-->
+        <!--android:lineSpacingExtra="20px">-->
+
+        <!--</com.android.melo.kaoqinfuxiao.weight.ScrollTextView>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="629px"
+            android:layout_marginTop="79px"
+            android:background="@color/gray_white">
+
+            <SurfaceView
+                android:id="@+id/sv_main_surfaceView"
+                android:layout_width="525px"
+                android:layout_height="525px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7px" />
+
+            <ImageView
+                android:layout_width="530px"
+                android:layout_height="530px"
+                android:layout_alignStart="@+id/sv_main_surfaceView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/probe" />
+
+            <TextView
+                android:id="@+id/tv_main_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="87px"
+                android:alpha="0"
+                android:background="@null"
+                android:text="卡号:"
+                android:textColor="#333333"
+                android:textSize="26px" />
+
+            <EditText
+                android:id="@+id/et_main_idcard"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_toEndOf="@+id/tv_main_id"
+                android:alpha="0"
+                android:background="@null"
+                android:hint="209875313467"
+                android:singleLine="true"
+                android:textColor="#666666"
+                android:textSize="26px" />
+
+
+            <ImageView
+                android:id="@+id/iv_main_schoolnews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64px"
+                android:layout_marginTop="45px"
+                android:layout_toRightOf="@+id/sv_main_surfaceView"
+                android:src="@mipmap/iv_school_news" />
+
+            <TextView
+                android:id="@+id/iv_main_schoolnews_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/iv_main_schoolnews"
+                android:layout_below="@id/iv_main_schoolnews"
+                android:layout_marginTop="20px"
+                android:lineSpacingExtra="20px"
+                android:paddingRight="40px"
+                android:text="北大附属实验学校幼儿园"
+                android:textColor="#666666"
+                android:textSize="25px" />
+            <!--<com.android.melo.kaoqinfuxiao.weight.ScrollTextView-->
+            <!--android:id="@+id/st_main_schoolnews_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignLeft="@id/iv_main_schoolnews"-->
+            <!--android:layout_below="@id/iv_main_schoolnews"-->
+            <!--android:layout_marginTop="20px"-->
+            <!--android:lineSpacingExtra="20px"-->
+            <!--android:paddingRight="40px" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/wv_main_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:src="@mipmap/iv_baner" />
+
+            <com.android.melo.kaoqinfuxiao.weight.AutoVideoview
+                android:id="@+id/vv_main_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--刷卡信息显示-->
+    <LinearLayout
+        android:id="@+id/layout_main_cardmsg"
+        android:layout_width="800dp"
+        android:layout_height="900dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_round_logindialog"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_loginDialog_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/iv_icon_delete" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/iv_dialog_cardmsgshow_icon" />
+
+        <ImageView
+            android:id="@+id/iv_dialog_cardmsgshow"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_round_logindialog"
+            android:scaleType="fitXY"
+            android:src="@mipmap/iv_msgshow_default" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_idcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="卡号："
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_idcard_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_dialog_msgshow_idcard"
+                android:layout_toRightOf="@id/tv_dialog_msgshow_idcard"
+                android:text="12345678"
+                android:textColor="@color/gray"
+                android:textSize="40sp" />
+
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_dialog_msgshow_idcard"
+                android:layout_marginTop="30dp"
+                android:text="班级："
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_class_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_dialog_msgshow_class"
+                android:layout_below="@id/tv_dialog_msgshow_idcard_content"
+                android:layout_toRightOf="@id/tv_dialog_msgshow_class"
+                android:text="小熊班"
+                android:textColor="@color/gray"
+                android:textSize="40sp" />
+
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_dialog_msgshow_class"
+                android:layout_marginTop="30dp"
+                android:text="姓名："
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/tv_dialog_msgshow_name_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_dialog_msgshow_name"
+                android:layout_below="@+id/tv_dialog_msgshow_class_content"
+                android:layout_toRightOf="@id/tv_dialog_msgshow_name"
+                android:text="蒙奇奇"
+                android:textColor="@color/gray"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

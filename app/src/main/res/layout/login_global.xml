@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="600dp"
+    android:layout_gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/iv_loginDialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25px"
+        android:layout_marginTop="25px"
+        android:src="@mipmap/iv_icon_delete" />
+
+    <ImageView
+        android:id="@+id/iv_loginDialog_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:src="@mipmap/iv_icon_app" />
+
+    <RelativeLayout
+        android:id="@+id/layout_loginDialog_schoolType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/iv_loginDialog_icon"
+        android:padding="30dp">
+        <!--直营登录-->
+        <RelativeLayout
+            android:id="@+id/layout_loginDialog_direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.android.melo.kaoqinfuxiao.weight.ClearEditText
+                android:id="@+id/et_loginDialog_jiHuoMa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@mipmap/icon_account"
+                android:ems="10"
+                android:hint="激活码" />
+        </RelativeLayout>
+        <!--附校，青鸟登录-->
+        <RelativeLayout
+            android:id="@+id/layout_loginDialog_joinOrQingNiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.android.melo.kaoqinfuxiao.weight.ClearEditText
+                android:id="@+id/et_loginDialog_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:drawableLeft="@mipmap/icon_account"
+                android:ems="10"
+                android:hint="账号" />
+
+
+            <com.android.melo.kaoqinfuxiao.weight.ClearEditText
+                android:id="@+id/et_loginDialog_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/et_loginDialog_userName"
+                android:layout_below="@+id/et_loginDialog_userName"
+                android:layout_marginTop="40px"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/icon_password"
+                android:ems="10"
+                android:hint="密码" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_loginDialog_joinOrQingNiao"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/btn_loginDialog_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_btn"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btn_loginDialog_cancle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_btn"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_loginDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_loginDialog_schoolType"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_loginDialog_direct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="直营" />
+
+        <RadioButton
+            android:id="@+id/rb_loginDialog_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附校" />
+
+        <RadioButton
+            android:id="@+id/rb_loginDialog_qn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="青鸟" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>

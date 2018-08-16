@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="schoolType">
+        <item>直营</item>
+        <item>附校</item>
+        <item>青鸟</item>
+    </string-array>
+</resources>
